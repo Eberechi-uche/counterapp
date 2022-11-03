@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+
+
+.App-header {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+button{
+  margin: 10px;
+}
+.card{
+  max-width: 18rem;
+  font-size: small;
+  transition: 500ms transform  ease-in-out;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  
+}
+.card:hover{
+  transform:scale(1.1);
+  
+}
+/* button animation */
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* button animation left */
+.button-left span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-left span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left:0;
+  transition: 0.5s;
+}
+
+.button-left:hover span {
+  padding-left: 15px;
+}
+
+.button-left:hover span:after {
+  opacity: 1;
+  left:-10px;
+ 
+}
+/* reset-button animation */
+.button-reset .content {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-reset .content:after {
+  content: '\2940';
+  position:absolute;
+  opacity: 0;
+  bottom: -10px;
+  left:-30px
+}
+
+.button-reset:hover .content:after {
+  opacity: 1;
+}
+.word{
+transition: 1s;
+}
+.button-reset:hover .word{
+opacity:0;
+}
+.content{
+  font-size: 25px;
+}
