@@ -1,10 +1,11 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  color:whitesmoke;
 }
 
 
 
-.App-header {
+.main-content {
   background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
@@ -12,15 +13,24 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+}
+
+nav a.active{
+  border:2px solid black;
+  border-radius: 50px;
+  transition: 700ms  ease-in-out;
 }
 button{
   margin: 10px;
 }
 .card{
-  max-width: 18rem;
+  
   font-size: small;
   transition: 500ms transform  ease-in-out;
+}
+.card-width{
+  max-width: 20rem;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -28,9 +38,24 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
   
 }
+.input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 18rem;
+  margin-top: 25px;
+  margin-left:20px;
+}
 .card:hover{
   transform:scale(1.1);
   
+}
+.large-text{
+  font-size: 20em;
+  
+}
+.center{
+  text-align: center;
 }
 /* button animation */
 .button span {

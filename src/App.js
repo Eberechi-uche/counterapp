@@ -1,16 +1,29 @@
 import './App.css';
-import Counter from './components/counter';
-import Instruction from './components/instruction';
-
+import CounterReducer from './components/CounterReducer';
+import Nav from './components/nav';
+import Customcounter from './components/customCounter';
+import Notfound from './components/Notfound';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    
+      <div className="App">
        <header className="App-header">
-        <Instruction></Instruction>
-        <Counter></Counter>
+       <Nav></Nav>
        </header>
+       <main className='main-content'>
+        <>
+        <Routes>
+          <Route path='/' element={<CounterReducer/>}></Route>
+          <Route path='/CustomCounter' element={<Customcounter/>}></Route>
+          <Route path='/*' element={<Notfound/>}></Route>
+        </Routes>
+        </>
+       </main>
     </div>
+    
+    
    
   )
 }
